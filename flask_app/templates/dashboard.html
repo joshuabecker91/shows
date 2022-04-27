@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows - Dashboard - Black Belt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="col-12 p-4">TV Shows</h1>
+    <nav class="d-flex justify-content-around align-items-center col-12">
+        <h1 class="text-center">{{user.first_name}} {{user.last_name}}</h1>
+        <div class="d-flex col-4 justify-content-around">
+            <a href="/new/show" class="btn btn-primary">Add a New Show</a>
+            <a href="/logout" class="btn btn-info">Logout</a>
+        </div>
+    </nav>
+    <div class="col-8 mx-auto">
+        <table class="table table-hover">
+            <h1 class="text-center">All TV Shows</h1>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Network</th>
+                    <th>Posted By</th>
+                    <th>Release Date</th>
+                    <th>Actions</th>
+                    <th>Update Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in shows %}
+                    <tr>
+                        <td><a href="/show/{{show.id}}">{{show.title}}</a></td>
+                        <td>{{show.network}}</td>
+                        <td>{{show.posted_by.first_name}} {{show.posted_by.last_name}}</td>
+                        <td>{{show.release_date.strftime('%m-%d-%Y')}}</td>
+                        <td>
+                            <a href="/show/{{show.id}}">View</a>
+                            {% if show.user_id == session.user_id %}
+                            <a href="/edit/show/{{show.id}}">Edit</a>
+                            <a href="/destroy/show/{{show.id}}">Delete</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="/like/show/{{show.id}}">Like</a>
+                            <a href="/unlike/show/{{show.id}}">Unlike</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <nav class="d-flex justify-content-around align-items-center col-12">
+        <h3 class="text-center">Liked Shows</h3>
+        <div class="d-flex col-4 justify-content-around">
+        </div>
+    </nav>
+    <div class="col-8 mx-auto">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Network</th>
+                    <th>Release Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in likes %}
+                    {% if row.user_id == session.user_id %}
+                        <tr>
+                            <td><a href="/show/{{row.id}}">{{row.title}}</a></td>
+                            <td>{{row.network}}</td>
+                            <td>{{row.release_date.strftime('%m-%d-%Y')}}</td>
+                            <td>{{row.description}}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

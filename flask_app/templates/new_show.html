@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows - Add a New Show - Black Belt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="col-12 p-4">TV Shows</h1>
+    <nav class="d-flex justify-content-around align-items-center col-12">
+        <h1 class="text-center">{{user.first_name}} {{user.last_name}}</h1>
+        <div class="d-flex col-4 justify-content-around">
+            <a href="/dashboard" class="btn btn-primary">TV Shows</a>
+            <a href="/logout" class="btn btn-info">Logout</a>
+        </div>
+    </nav>
+    <form action="/create/show" method="post" class="col-11 p-4 my-4 mx-auto">
+        <h2 class="text-primary">Add a New Show</h2>
+        {% with messages = get_flashed_messages(category_filter=['show']) %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Please Try Again:</strong>
+                    {% for message in messages %}
+                    <p>{{message}}</p>
+                    {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+        <div class="d-flex justify-content-between col-9">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea name="description"  cols="30" rows="5" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="network">Network:</label>
+                    <input type="text" name="network" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="release_date">Release Date:</label>
+                    <input type="date" name="release_date" class="form-control">
+                </div>
+                <br>
+                <input type="submit" value="Submit" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

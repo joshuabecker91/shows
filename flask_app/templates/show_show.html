@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows - View Show - Black Belt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="col-12 p-4">TV Shows</h1>
+    <nav class="d-flex justify-content-around align-items-center col-12">
+        <h1 class="text-center">{{user.first_name}} {{user.last_name}}</h1>
+        <div class="d-flex col-4 justify-content-around">
+            <a href="/dashboard" class="btn btn-primary">TV Shows</a>
+            <a href="/logout" class="btn btn-info">Logout</a>
+        </div>
+    </nav>
+    <div class="card col-10 mx-auto my-5">
+        <div class="card-body">
+            <h2 class="card-title text-primary">{{show.title}}</h2>
+            <p class="card-text">Network:  {{show.network}}</p>
+            <p class="card-text">Release Date: {{show.release_date.strftime('%m-%d-%Y')}}</p>
+            <p class="card-text">Description: {{show.description}}</p>
+            <p class="card-text">Posted By: {{show.posted_by.first_name}} {{show.posted_by.last_name}}</p>
+            <p class="card-text">Likes: {{count_likes}}</p>
+        </div>
+    </div>
+</body>
+</html>
