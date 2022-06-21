@@ -1,4 +1,4 @@
-See tv_shows_demonstration.mp4 in root directory
+See tv_shows_demo.mp4 in root directory
 TV Shows
 
 http://50.18.70.228 AWS DEPLOYED
