@@ -3,7 +3,7 @@ TV Shows
 
 http://50.18.70.228 AWS DEPLOYED
 
-Full Login and Registration - full CRUD and access control: Python, Flask, MySQL, Bcrypt, Validations, HTML, CSS, Bootstrap, JS, Deployed with AWS EC2 Instance.
+Full Login and Registration - full CRUD and access control: Python, Flask, MySQL, Bcrypt, Jinja, Validations, HTML, CSS, Bootstrap, JS, Deployed with AWS EC2 Instance.
 
 Like / Unlike feature. 
 
