@@ -7,4 +7,4 @@ Full Login and Registration - full CRUD and access control: Python, Flask, MySQL
 
 Like / Unlike feature. 
 
-You may have to download the video if GitHub doesn't allow streaming.
+You may have to download the video if GitHub doesn't allow streaming. Thank you!
