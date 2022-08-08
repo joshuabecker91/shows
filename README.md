@@ -1,4 +1,6 @@
-Full Login and Registration - Full Stack Application w/full CRUD and access control: Python, Flask, MySQL, Bcrypt, Jinja, Validations, HTML, CSS, Bootstrap, JS, Deployed with AWS EC2 Instance. Like / Unlike feature.
+Software Engineer | TV Shows | Full Stack Application w/ Login and Registration, full CRUD and access control using Python/Flask deployed w/ AWS EC2
+
+Technologies used: Python, Flask, MySQL, Bcrypt, Jinja, Validations, JS, CSS, Bootstrap, HTML, AWS EC2
 
 - Built a full stack application and deployed on AWS EC2 instance 
 - Successfully implemented full login and registration w/ user authentication and access control utilizing Bcrypt, python validations, and MySQL database within the Flask Framework
