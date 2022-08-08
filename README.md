@@ -1,4 +1,4 @@
-Software Engineer | TV Shows | Full Stack Application w/ Login and Registration, full CRUD and access control using Python/Flask deployed w/ AWS EC2
+TV Shows | Full Stack Application w/ Login and Registration, full CRUD and access control using Python/Flask deployed w/ AWS EC2
 
 Technologies used: Python, Flask, MySQL, Bcrypt, Jinja, Validations, JS, CSS, Bootstrap, HTML, AWS EC2
 
