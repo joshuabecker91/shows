@@ -1,4 +1,4 @@
-Technologies used: Python, Flask, MySQL, Bcrypt, Jinja, Validations, JS, CSS, Bootstrap, HTML, AWS EC2
+Full Login and Registration - Full Stack Application w/full CRUD and access control: Python, Flask, MySQL, Bcrypt, Jinja, Validations, HTML, CSS, Bootstrap, JS, Deployed with AWS EC2 Instance. Like / Unlike feature.
 
 - Built a full stack application and deployed on AWS EC2 instance 
 - Successfully implemented full login and registration w/ user authentication and access control utilizing Bcrypt, python validations, and MySQL database within the Flask Framework
